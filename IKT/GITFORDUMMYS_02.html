@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>GITFORDUMMYS</title>
+    <link rel="stylesheet" href="GITFORDUMMYS.css">
+</head>
+<body>
+    <h1 align="center">Git parancsai bővebben:</h1>
+    
+    <pre>
+    <table align="center">
+    <tr>
+<caption><h2>A gitben, amikor fájlokon és más erőforrásokon dolgozunk, minden helyben történik, nincs szükség hálózati kapcsolatra. 
+Így a munkánk gyors és offline lehet. A munkánkat bármikor szinkronizálhatjuk egy központi tárolóval.<h2>
+<h1>Fogalmak</h1></caption>
+
+<td id="jobbvonal">
+<div>
+<h2>Kommit</h2>
+A kommit, a fájlokról elmentett pillanatkép. Érdemes úgy
+megválasztani a kommitjainkat, hogy az logikailag összetartozó
+egységeket együtt kommitoljuk. A git rendszerben commit alparanccsal 
+használjuk. A kommit a legelemibb tárolandó egység. 
+Érdemes minél sűrűbben kommitolni.
+
+<h2>Branch</h2>
+Fejlesztés egy ága. Amikor készítünk egy projektet és azt a Git-be 
+helyezzük, lesz egy fő (master) baranch-ünk. Ebből újabb branchokat
+hozhatunk létre. A háttérben egy branch létrehozása egy mutató az utolsó
+állapotra. Egy branch tulajdonképpen kommitok összessége.
+
+<h2>Clone</h2>
+Távoli gépről másolatot készíthetünk egy branch-ről.
+
+<h2>Checkout</h2>
+A branchek közötti váltásra használható.
+
+<h2>Push</h2>
+Ha kiadok egy commit parancsot, akkor az csak helyben történik – nem 
+úgy mint az SVN-ben. A központi szerverrel való szinkronizáláshoz 
+szükségünk van a Push műveletre a push paranccsal.
+
+<h2>Head</h2>
+Egy mutató, ami a munkánk során az aktuális branch-ra mutat.
+
+<h2>Munkakönyvtár</h2>
+A munkakönyvtár az a könyvtár, amelyben létrehozzuk a forrásállományainkat, 
+és ahol dolgozunk rajtuk. Ez tulajdonképpen a projekt könyvtára.    
+</div>
+</td>
+    <td>
+    <div>
+<h2>Stage</h2>
+A stage egy átmeneti hely. Azokat az állományokat,
+amelyeket most hoztunk létre vagy módosítottuk a stage
+helyre kell tenni, ha szeretnénk követett állapotba tenni.
+
+<h2>Repository</h2>
+Tároló, ahol a fájlok tárolásra kerülnek. A helyi gépen a
+tároló valójában a .git könyvtárban van. A távolig
+szerveren, egy .git kiterjesztésű könyvtár a szokásos tárolási
+hely.
+
+<h2>Helyi tároló</h2>
+A helyi tároló a munkakönyvtár, a stage hely és a repository
+helyek együttese.
+
+<h2>Kliens-szerver felépítés</h2>
+A git szerver-kliens alapú, de használható szerver nélkül is,
+mivel kliens oldalon is tárolódik az összes állomány.
+Alapvetően egy helyi tárolóban dolgozunk, a szerverre egy
+push művelettel töltjük fel az adatainkat.
+A letöltés, clone, pull és fecth műveletekkel lehetséges.
+
+<h2>Gyakran használt parancsok, és rövid működésük:</h2>
+A git init parancs létrehoz az repositorálandó könyvtárban
+egy .git könyvtárat. Ez tulajdonképpen egy helyi adatbázis,
+ami eltárolja a projektünk verzióit, és minden azzal
+kapcsolatos információt.
+git status lekérdezhetjük a fájlok és a projektünk státuszát
+git add paranccsal a stage helyre tesszük a fájlokat, majd a 
+commit paranccsal elkészítjük a pillanatképet.
+Ezek még így mindig a helyi gépen vannak.
+git commit –m „komment a verzióhoz, szinte kötelező”
+tárolja a pillanatképet.
+git push paranccsal a munkánk feltöltése (kommitok) a
+remote repository-ba. Tehát ez a parancs tölti fel a
+webtárhelyre, a felhőbe a megváltoztot verziójú
+munkánkat. Alap használati formája: git push origin „ide
+megadjuk a linket, ahol elérhető a github-on a reponk”
+git pull a push parancs ellentettje, letölti a weben lévő
+munkánkat, és összefésüli a miénkkel. Így egy pull után a
+legfrissebb verziójú programban dolgozhatunk tovább.
+    </div>    
+</td>
+</tr>
+</table>    
+</pre>    
+
+    
+    
+    
+    
+    
+    <p><a href="GITFORDUMMYS.html"><img src="vissza.JPG" align="left"></a></p>
+</body>
+</html>
